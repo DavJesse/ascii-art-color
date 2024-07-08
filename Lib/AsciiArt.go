@@ -63,10 +63,10 @@ func AsciiArt(color1, color2, reset, mainString, subString, bannerFile string) s
 	var slices []string
 	if file == "thinkertoy.txt" {
 		// Lines in thinkertoy.txt banner file are separated by "\r\n"
-		slices = strings.Split(string(content), "\r\n")
+		slices = strings.Split(string(content), "\n")
 	} else {
 		// Lines in standard.txt and shadow.txt banner files are separated by "\n"
-		slices = strings.Split(string(content), "\n")
+		slices = strings.Split(string(content), "\r\n")
 	}
 
 	// Print ASCII ART and return output string for testing
